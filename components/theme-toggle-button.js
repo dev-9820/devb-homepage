@@ -18,6 +18,7 @@ const ThemeToggleButton = () => {
         <IconButton aria-label="Toggle Theme"
         colorScheme={useColorModeValue('blackAlpha', 'orange')}
         icon={useColorModeValue(<MoonIcon />,<SunIcon />)}
+        shadow="lg"
         onClick={toggleColorMode}>
         </IconButton>
         </motion.div>
