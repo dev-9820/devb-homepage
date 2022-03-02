@@ -36,7 +36,7 @@ const Navbar = props => {
         style={{backdropFilter: 'blur(10px'}}
         zIndex={1}
         {...props}>
-            <Container display="flex" p={2} maxW="container.md" wrap="wrap" align="center" justify="space-between">
+            <Container display="flex" p={1} maxW="container.md" wrap="wrap" align="center" justify="space-between">
                 <Flex align = "center" paddingTop={2} mr= {5}>
                     <Heading as="h1" size="lg" letterSpacing={'tighter'}>
                         <Logo />
@@ -49,6 +49,7 @@ const Navbar = props => {
                 width={{base: 'full', md: 'auto'}}
                 alignItems="center"
                 flexGrow={1}
+                paddingTop={1.5}
                 mt = {{ base: 4, nmd: 0}}
                 >
                 <LinkItem href="/works" path={path}>
