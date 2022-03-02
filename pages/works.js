@@ -19,9 +19,9 @@ const Works = () => {
                 <Section delay={0.1}>
                     <Box>
                     <Button rightIcon={<ChevronRightIcon/>} colorScheme="teal">
-                        <NextLink href={"https://devb3.itch.io/"}>
+                        <Link href={"https://devb3.itch.io/"}>
                             Games
-                        </NextLink>
+                        </Link>
                     </Button>
                     </Box>
                     <Box flexShrink={0} mt={{ base:4 , md: 0}} ml={{md:6}} align="left" mt={"7"}>
