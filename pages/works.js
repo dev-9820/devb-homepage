@@ -18,7 +18,7 @@ const Works = () => {
             <SimpleGrid column={[1,1,2]} gap={6}>
                 <Section delay={0.1}>
                     <Box>
-                    <Button rightIcon={<ChevronRightIcon/>} colorScheme="teal">
+                    <Button shadow="lg" rightIcon={<ChevronRightIcon/>} colorScheme="teal">
                         <NextLink href={"https://devb3.itch.io/"}>
                             Games
                         </NextLink>
@@ -31,7 +31,7 @@ const Works = () => {
                 </Section>
                 <Section delay={0.2}>
                     <Box>
-                    <Button rightIcon={<ChevronRightIcon/>} colorScheme="teal">
+                    <Button shadow="lg" rightIcon={<ChevronRightIcon/>} colorScheme="teal">
                         <NextLink href={""}>
                             Websites
                         </NextLink>
