@@ -38,7 +38,7 @@ const Page=()=> {
                 <Heading paddingBottom='12px' as="h3" variant="section-title">
                     Work / Study
                 </Heading>
-                <Paragraph>Dev is a Second Year Engineering student and works as a freelance Developer in Games, Apps and Websites... with sheer passion in Problem Solving.
+                <Paragraph>Dev is a Third Year Engineering student and works as a freelance Developer in Games, Apps and Websites... with sheer passion in Problem Solving.
                 </Paragraph>
                 <Box align="center" my={4}>
                     <NextLink href="/works">
