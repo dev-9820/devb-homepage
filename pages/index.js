@@ -14,7 +14,7 @@ import {
     IoLogoDropbox,
     IoLogoGithub
 } from 'react-icons/io5'
-import {GoLocation} from 'react-icons/io5'
+import {SunIcon} from '@chakra-ui/icons'
 
 const Page=()=> {
     return (
@@ -55,11 +55,11 @@ const Page=()=> {
                 </Heading>
                 <BioSection>
                     <BioYear>2002</BioYear>
-                   <Icon as={GoLocation}/>Born in Maharashtra, India.
+                   Born in Maharashtra, India.
                 </BioSection>
                 <BioSection>
                     <BioYear>2023</BioYear>
-                    Ongoing Third Year of Engineering in ECS
+                    <SunIcon/>Ongoing Third Year of Engineering in ECS
                 </BioSection>
             </Section>
             <Section delay={0.3}>
