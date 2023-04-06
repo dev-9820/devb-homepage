@@ -55,7 +55,7 @@ const Page=()=> {
                 </Heading>
                 <BioSection>
                     <BioYear>2002</BioYear>
-                    <Icon as={GoLocation}/>Born in Maharashtra, India.
+                    leftIcon={<Icon as={IoLogoInstagram}/>}Born in Maharashtra, India.
                 </BioSection>
                 <BioSection>
                     <BioYear>2023</BioYear>
