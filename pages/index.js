@@ -14,7 +14,7 @@ import {
     IoLogoDropbox,
     IoLogoGithub
 } from 'react-icons/io5'
-import {GoLocation} from 'react-icons'
+import {GoLocation} from 'react-icons/io5'
 
 const Page=()=> {
     return (
