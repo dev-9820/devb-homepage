@@ -59,7 +59,7 @@ const Page=()=> {
                 </BioSection>
                 <BioSection>
                     <BioYear>2023</BioYear>
-                    <SunIcon/>Ongoing Third Year of Engineering in ECS
+                    Ongoing Third Year of Engineering in ECS
                 </BioSection>
             </Section>
             <Section delay={0.3}>
