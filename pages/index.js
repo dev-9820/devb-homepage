@@ -57,8 +57,8 @@ const Page=()=> {
                     Born in Maharashtra, India.
                 </BioSection>
                 <BioSection>
-                    <BioYear>2022</BioYear>
-                    Ongoing Second Year of Engineering in ECS
+                    <BioYear>2023</BioYear>
+                    Ongoing Third Year of Engineering in ECS
                 </BioSection>
             </Section>
             <Section delay={0.3}>
@@ -66,7 +66,7 @@ const Page=()=> {
                     I ♥
                 </Heading>
                 <Paragraph>
-                    Machine Learning, Artificial Intelligence, Game development, App development, Video Editing
+                    3D Animation, VFX, Machine Learning, Artificial Intelligence, Game development, Web/App development, Video Editing
                 </Paragraph>
             </Section>
             <Section delay={0.4}>
