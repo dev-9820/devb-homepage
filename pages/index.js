@@ -14,6 +14,7 @@ import {
     IoLogoDropbox,
     IoLogoGithub
 } from 'react-icons/io5'
+import {GoLocation} from 'react-icons'
 
 const Page=()=> {
     return (
@@ -54,7 +55,7 @@ const Page=()=> {
                 </Heading>
                 <BioSection>
                     <BioYear>2002</BioYear>
-                    Born in Maharashtra, India.
+                    <Icon as={GoLocation}/>Born in Maharashtra, India.
                 </BioSection>
                 <BioSection>
                     <BioYear>2023</BioYear>
