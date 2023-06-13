@@ -21,7 +21,7 @@ const Page=()=> {
         <Layout>
         <Container>
             <Box boxShadow='lg' borderRadius="lg" bg={useColorModeValue('whiteAlpha.900','whiteAlpha.200')} p={1.5} mt={3} mb={6} align="center">
-                Hello, I am a Digital Developer based in India!
+                Hello, I am a Digital Arist / Developer based in India!
             </Box>
 
             <Box display={{md: 'flex'}}>
