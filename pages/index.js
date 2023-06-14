@@ -6,6 +6,7 @@ import { BellIcon, ChevronRightIcon, EditIcon } from '@chakra-ui/icons'
 import Layout from '../components/layouts/article'
 import { BioSection, BioYear } from '../components/bio'
 import { GridItem } from '../components/grid-item'
+
 import {
     IoLogoTwitter,
     IoLogoInstagram,
@@ -32,7 +33,8 @@ const Page=()=> {
             <p>Digital Artist (Games / Websites / 3D Animation)</p>
             </Box>
             <Box flexShrink={0} mt={{ base:4 , md: 0}} ml={{md:6}} align="center">
-                <Image shadow='lg' borderColor="whiteAlpha.800" borderWidth={2} borderStyle="solid" maxWidth="100px" display="inline-block" borderRadius="full" src="/images/dev.jpg" alt="Profile"/>
+                <Image shadow='lg' borderColor="blue.200" borderWidth={2} borderStyle="solid" maxWidth="100px" display="inline-block" borderRadius="full" src="/images/dev.jpg" alt="Profile"/>
+
             </Box>
             </Box>
             <Section delay={0.1}>
