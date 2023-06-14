@@ -21,7 +21,7 @@ const Page=()=> {
         <Layout>
         <Container>
             <Box boxShadow='lg' borderRadius="lg" bg={useColorModeValue('whiteAlpha.900','whiteAlpha.200')} p={1.5} mt={3} mb={6} align="center">
-                Hello, I am a Digital Arist / Developer based in India!
+                Hello, I am a Digital Arist based in India!
             </Box>
 
             <Box display={{md: 'flex'}}>
@@ -29,7 +29,7 @@ const Page=()=> {
             <Heading as="h2" variant="page-title">
                 Dev Bhanushali
             </Heading>
-            <p>Digital Developer (Games / Websites / Apps)</p>
+            <p>Digital Artist (Games / Websites / 3D Animation)</p>
             </Box>
             <Box flexShrink={0} mt={{ base:4 , md: 0}} ml={{md:6}} align="center">
                 <Image shadow='lg' borderColor="whiteAlpha.800" borderWidth={2} borderStyle="solid" maxWidth="100px" display="inline-block" borderRadius="full" src="/images/dev.jpg" alt="Profile"/>
@@ -39,7 +39,7 @@ const Page=()=> {
                 <Heading paddingBottom='12px' as="h3" variant="section-title">
                     Work / Study
                 </Heading>
-                <Paragraph>Dev is a Third Year Engineering student and works as a freelance Developer in Games, Apps and Websites... with sheer passion in Problem Solving.
+                <Paragraph>I am a Final Year Engineering student working as a Freelance Developer in Games, Websites & Animation.
                 </Paragraph>
                 <Box align="center" my={4}>
                     <NextLink href="/works">
@@ -54,12 +54,16 @@ const Page=()=> {
                     Bio
                 </Heading>
                 <BioSection>
-                    <BioYear>2002</BioYear>
-                   Born in Maharashtra, India.
+                    <BioYear>2020</BioYear>
+                   Completed Junior College.
                 </BioSection>
                 <BioSection>
                     <BioYear>2023</BioYear>
-                    Ongoing Third Year of Engineering in ECS
+                    Ongoing Internship as an Animation Engineer & VFX Artist.
+                </BioSection>
+                <BioSection>
+                    <BioYear>2024</BioYear>
+                    Graduating in Engineering in ECS
                 </BioSection>
             </Section>
             <Section delay={0.3}>
