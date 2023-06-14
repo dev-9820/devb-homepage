@@ -61,11 +61,11 @@ const Page=()=> {
                 </BioSection>
                 <BioSection>
                     <BioYear>2023</BioYear>
-                    Ongoing Internship as an Animation Engineer & VFX Artist.
+                    Ongoing Internship as an Animation Engineer & Web Developer.
                 </BioSection>
                 <BioSection>
                     <BioYear>2024</BioYear>
-                    Graduating in Engineering in ECS
+                    Graduating in ECS Engineering.
                 </BioSection>
             </Section>
             <Section delay={0.3}>
