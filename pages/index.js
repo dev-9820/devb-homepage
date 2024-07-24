@@ -41,7 +41,7 @@ const Page=()=> {
                 <Heading paddingBottom='12px' as="h3" variant="section-title">
                     Work / Study
                 </Heading>
-                <Paragraph>I am an CS Engineering Graduate working as a Freelance Developer in Games, Websites & Animation.
+                <Paragraph>I am a Final Year Engineering student working as a Freelance Developer in Games, Websites & Animation.
                 </Paragraph>
                 <Box align="center" my={4}>
                     <NextLink href="/works">
@@ -65,7 +65,7 @@ const Page=()=> {
                 </BioSection>
                 <BioSection>
                     <BioYear>2024</BioYear>
-                    Graduated in ECS Engineering.
+                    Graduating in ECS Engineering.
                 </BioSection>
             </Section>
             <Section delay={0.3}>
