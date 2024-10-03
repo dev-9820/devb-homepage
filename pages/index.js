@@ -22,7 +22,7 @@ const Page=()=> {
         <Layout>
         <Container>
             <Box boxShadow='lg' borderRadius="lg" bg={useColorModeValue('whiteAlpha.900','whiteAlpha.200')} p={1.5} mt={3} mb={6} align="center">
-                Hello, I am a Digital Arist based in India!
+                Hello, I am a Digital Arist based in Mumbai, India!
             </Box>
 
             <Box display={{md: 'flex'}}>
@@ -30,7 +30,7 @@ const Page=()=> {
             <Heading as="h2" variant="page-title">
                 Dev Bhanushali
             </Heading>
-            <p>Digital Artist (Games / Websites / 3D Animation)</p>
+            <p>Digital Artist ( Websites / AI / Games / Animation )</p>
             </Box>
             <Box flexShrink={0} mt={{ base:4 , md: 0}} ml={{md:6}} align="center">
                 <Image shadow='lg' borderColor="blue.200" borderWidth={2} borderStyle="solid" maxWidth="100px" display="inline-block" borderRadius="full" src="/images/dev.jpg" alt="Profile"/>
@@ -39,13 +39,13 @@ const Page=()=> {
             </Box>
             <Section delay={0.1}>
                 <Heading paddingBottom='12px' as="h3" variant="section-title">
-                    Work / Study
+                    Work
                 </Heading>
-                <Paragraph>I am an Engineering Graduate working as a Freelance Developer in Games, Websites & Animation.
+                <Paragraph>Just a nerd working on Projects at Midnight.
                 </Paragraph>
                 <Box align="center" my={4}>
                     <NextLink href="/works">
-                        <Button rightIcon={<ChevronRightIcon/>} shadow="lg" colorScheme="teal">
+                        <Button cursor="not-allowed" rightIcon={<ChevronRightIcon/>} shadow="lg" colorScheme="teal">
                         My Portfolio
                         </Button>
                     </NextLink>

@@ -17,10 +17,10 @@ const Works = () => {
 
             <SimpleGrid column={[2,2,2]} gap={6}>
                 <Section delay={0.1}>
-                    <NextLink href={"/"} passHref>
+                    <NextLink href={"https://printify-clone.vercel.app/"} passHref>
                     <Box pt={"5"} flexShrink={0} mt={{ base:4 , md: 0}} ml={{md:6}} align="left">
-                        <Image shadow='lg' borderColor="whiteAlpha.500" borderWidth={1} borderStyle="solid" maxWidth="250px" display="inline-block" borderRadius="none" src="/images/website1.png" alt="website1"/>
-                        <p>Portfolio Website</p>
+                        <Image cursor="not-allowed" shadow='lg' borderColor="whiteAlpha.500" borderWidth={1} borderStyle="solid" maxWidth="250px" display="inline-block" borderRadius="none" src="/images/clone.png" alt="website1"/>
+                        <p>Printify Clone Website</p>
                     </Box>
                     </NextLink>
 
