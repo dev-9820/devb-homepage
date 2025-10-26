@@ -13,7 +13,8 @@ import {
     IoLogoYouTubee,
     IoLogoDiscord,
     IoLogoDropbox,
-    IoLogoGithub
+    IoLogoGithub,
+    IoLogoLinkedin
 } from 'react-icons/io5'
 import {SunIcon} from '@chakra-ui/icons'
 
@@ -30,7 +31,7 @@ const Page=()=> {
             <Heading as="h2" variant="page-title">
                 Dev Bhanushali
             </Heading>
-            <p>Digital Artist ( Websites / AI / Games / Animation )</p>
+            <p>Developer • AI/ML Engineer • LLM Integrator •  </p>
             </Box>
             <Box flexShrink={0} mt={{ base:4 , md: 0}} ml={{md:6}} align="center">
                 <Image shadow='lg' borderColor="blue.200" borderWidth={2} borderStyle="solid" maxWidth="100px" display="inline-block" borderRadius="full" src="/images/dev.jpg" alt="Profile"/>
@@ -38,53 +39,77 @@ const Page=()=> {
             </Box>
             </Box>
             <Section delay={0.1}>
-                <Heading paddingBottom='12px' as="h3" variant="section-title">
-                    Work
-                </Heading>
-                <Paragraph>Just a nerd working on Projects at Midnight.
-                </Paragraph>
-                <Box align="center" my={4}>
-                    <NextLink href="/works">
-                        <Button cursor="not-allowed" rightIcon={<ChevronRightIcon/>} shadow="lg" colorScheme="teal">
-                        My Portfolio
-                        </Button>
-                    </NextLink>
-                </Box>
-            </Section>
+          <Heading paddingBottom="12px" as="h3" variant="section-title">
+            About Me
+          </Heading>
+          <Paragraph>
+            I’m a builder at heart — I turn ideas into intelligent, interactive digital systems. I work at
+            the intersection of <b>Development</b> and <b>Automation</b>, creating apps powered
+            by <b>LLMs, RAG pipelines, and generative interfaces</b>. From crafting modern UIs to
+            engineering data-driven backends, I love designing software that learns, adapts, and delivers
+            real value.
+          </Paragraph>
+          <Box align="center" my={4}>
+            <NextLink href="/works">
+              <Button
+                rightIcon={<ChevronRightIcon />}
+                shadow="lg"
+                colorScheme="teal"
+                _hover={{ transform: 'scale(1.05)' }}
+              >
+                View My Work
+              </Button>
+            </NextLink>
+          </Box>
+        </Section>
             <Section delay={0.2}>
-                <Heading paddingBottom='12px' as="h3" variant="section-title">
-                    Bio
-                </Heading>
-                <BioSection>
-                    <BioYear>2020</BioYear>
-                   Completed Junior College.
-                </BioSection>
-                <BioSection>
-                    <BioYear>2023</BioYear>
-                    Ongoing Internship as an Animation Engineer & Web Developer.
-                </BioSection>
-                <BioSection>
-                    <BioYear>2024</BioYear>
-                    Graduated in ECS Engineering.
-                </BioSection>
-            </Section>
+          <Heading paddingBottom="12px" as="h3" variant="section-title">
+            Journey
+          </Heading>
+          <BioSection>
+            <BioYear>2020</BioYear>
+            Completed Junior College.
+          </BioSection>
+          <BioSection>
+            <BioYear>2023</BioYear>
+            Began developing full-stack projects integrating AI/ML — from interactive web apps to
+            intelligent learning platforms.
+          </BioSection>
+          <BioSection>
+            <BioYear>2024</BioYear>
+            Graduated in Computer Science, Mumbai University.
+          </BioSection>
+          <BioSection>
+            <BioYear>2025</BioYear>
+            Working as a Full Stack & AI Developer — building end-to-end web systems, integrating
+            LLMs, automation, and scalable architectures.
+          </BioSection>
+        </Section>
             <Section delay={0.3}>
-                <Heading paddingBottom='12px' as="h3" variant="section-title">
-                    I ♥
-                </Heading>
-                <Paragraph>
-                    3D Animation, VFX, Machine Learning, Artificial Intelligence, Game development, Web/App development, Video Editing
-                </Paragraph>
-            </Section>
+          <Heading paddingBottom="12px" as="h3" variant="section-title">
+            I ♥
+          </Heading>
+          <Paragraph>
+            AI Automation, Machine Learning, Full Stack Development, 3D Web Experiences, Game Design,
+            Generative Tools, and solving complex problems with creativity and code.
+          </Paragraph>
+        </Section>
             <Section delay={0.4}>
                 <Heading paddingBottom='12px' as="h3" variant="section-title">
                     On the web
                 </Heading>
                 <List>
                     <ListItem>
-                        <Link href="https://www.instagram.com/devvvv.b/" target="_blank">
+              <Link href="https://www.linkedin.com/in/dev-bhanushali-8b082b388/" target="_blank">
+                <Button variant="ghost" colorScheme="teal" leftIcon={<Icon as={IoLogoLinkedin} />}>
+                  Dev Bhanushali
+                </Button>
+              </Link>
+            </ListItem>
+                    <ListItem>
+                        <Link href="https://www.instagram.com/devb.exe/" target="_blank">
                             <Button variant="ghost" colorScheme="teal" leftIcon={<Icon as={IoLogoInstagram}/>}>
-                                Devvvv.b
+                                devb.exe
                             </Button>
                         </Link>
                     </ListItem>
@@ -95,6 +120,7 @@ const Page=()=> {
                             </Button>
                         </Link>
                     </ListItem>
+                    
                     <ListItem>
                         <Link href="" target="_blank">
                             <Button variant="ghost" colorScheme="teal" leftIcon={<Icon as={IoLogoGithub}/>}>
@@ -106,7 +132,7 @@ const Page=()=> {
             </Section>
             <Section>
                 <Heading as="h6" fontSize={"12"} color="gray" align="center">
-                © 2022 Dev Bhanushali . All Rights Reserved.
+                © {new Date().getFullYear()} Dev Bhanushali • All Rights Reserved
                 </Heading>
             </Section>
         </Container>
