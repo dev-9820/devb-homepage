@@ -5,26 +5,41 @@ import { GridItem } from "../components/grid-item";
 import NextLink from 'next/link'
 import thumb1 from '../public/images/thumb1.png'
 import thumb2 from '../public/images/thumb2.png'
+// Thumbnails (replace with your actual images in /public/images)
+import thumbAIcinema from '../public/images/rise.jpg';
+import thumbNetflix from '../public/images/netflix.jpg';
+import thumbMarvelVFX from '../public/images/marvel.jpg';
 
 const Posts = () => (
-    <Layout title="Posts">
-        <Container>
-            <Heading as="h4" fontSize={20} mb={4}>
-                Top Posts
-            </Heading>
-            <Section>
-            <SimpleGrid columns={[1,1,2]} gap={6}>
-            <GridItem
-                title="Another Day at University"
-                thumbnail={thumb1}
-                href="https://www.instagram.com/reel/CcAk-9DKAMQ/?igshid=YmMyMTA2M2Y=" />
-            <GridItem
-                title="Day 109"
-                thumbnail={thumb2}
-                href="https://www.instagram.com/reel/Cbhngrvqd_H/?igshid=YmMyMTA2M2Y=" />
-            </SimpleGrid>
-            </Section>
-        </Container>
-    </Layout>
-)
-export default Posts
+  <Layout title="Articles">
+    <Container>
+      <Heading as="h3" fontSize={22} mb={4}>
+        Featured Articles
+      </Heading>
+
+      <Section delay={0.1}>
+        <SimpleGrid columns={[1, 1, 2]} gap={6}>
+          <GridItem
+            title="The Rise of AI in Cinema: How Algorithms Are Changing Storytelling"
+            thumbnail={thumbAIcinema}
+            href="/posts/ai-in-cinema"
+          />
+
+          <GridItem
+            title="Inside Netflix’s Recommendation Magic: The Tech That Keeps You Binge-Watching"
+            thumbnail={thumbNetflix}
+            href="/posts/netflix-recommendation"
+          />
+
+          <GridItem
+            title="From Film to Frame: The Tech Behind Marvel’s VFX Universe"
+            thumbnail={thumbMarvelVFX}
+            href="/posts/marvel-vfx"
+          />
+        </SimpleGrid>
+      </Section>
+    </Container>
+  </Layout>
+);
+
+export default Posts;
