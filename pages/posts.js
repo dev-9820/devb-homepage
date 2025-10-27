@@ -9,7 +9,7 @@ import thumb2 from '../public/images/thumb2.png'
 import thumbAIcinema from '../public/images/rise.jpg';
 import thumbNetflix from '../public/images/netflix.jpg';
 import thumbMarvelVFX from '../public/images/marvel.jpg';
-
+import thumbKeyboard from '../public/images/keyboard.jpg';
 const Posts = () => (
   <Layout title="Articles">
     <Container>
@@ -19,6 +19,12 @@ const Posts = () => (
 
       <Section delay={0.1}>
         <SimpleGrid columns={[1, 1, 2]} gap={6}>
+          <GridItem
+  title="Why India Still Isn’t Ready for Mechanical Keyboards"
+  thumbnail={thumbKeyboard}
+  href="/posts/mechanical-keyboards"
+/>
+
           <GridItem
             title="The Rise of AI in Cinema: How Algorithms Are Changing Storytelling"
             thumbnail={thumbAIcinema}
