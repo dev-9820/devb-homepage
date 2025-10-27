@@ -1,40 +1,91 @@
-import { Container, Heading, SimpleGrid, Divider, Button, Box, Image, Link } from "@chakra-ui/react";
+import {
+  Container,
+  Heading,
+  SimpleGrid,
+  Box,
+  Text
+} from "@chakra-ui/react";
 import Section from "../components/section";
-import { WorkGridItem } from '../components/grid-item'
-import thumbInsta from '../public/images/thumbInsta.png'
 import Layout from "../components/layouts/article";
-import { Stack } from "@chakra-ui/react";
-import { ChevronRightIcon } from "@chakra-ui/icons";
-import NextLink from 'next/link'
 
 const Works = () => {
-    return(
-        <Layout>
-        <Container>
-            <Heading as={"h1"} fontSize={20} mb={1}>
-                Websites
-            </Heading>
+  return (
+    <Layout>
+      <Container>
+        <Heading as="h1" fontSize={22} mb={3}>
+          Projects & Work Samples
+        </Heading>
 
-            <SimpleGrid column={[2,2,2]} gap={6}>
-                <Section delay={0.1}>
-                    <NextLink href={"https://printify-clone.vercel.app/"} passHref>
-                    <Box pt={"5"} flexShrink={0} mt={{ base:4 , md: 0}} ml={{md:6}} align="left">
-                        <Image cursor="not-allowed" shadow='lg' borderColor="whiteAlpha.500" borderWidth={1} borderStyle="solid" maxWidth="250px" display="inline-block" borderRadius="none" src="/images/clone.png" alt="website1"/>
-                        <p>Printify Clone Website</p>
-                    </Box>
-                    </NextLink>
+        <SimpleGrid columns={[1, 1, 2]} gap={1}>
+          {/* ----------- Project 1 ----------- */}
+          <Section delay={0.1}>
+            <Box
+              pt={4}
+              flexShrink={0}
+              mt={{ base: 4, md: 0 }}
+              ml={{ md: 4 }}
+              align="left"
+              borderWidth={1}
+              borderColor="whiteAlpha.400"
+              borderRadius="lg"
+              overflow="hidden"
+              shadow="md"
+              p={2}
+            >
+              <Box
+                as="iframe"
+                src="https://drive.google.com/file/d/1Hr2Y4vO_De2rcA4GiZasTIcFR39TpAMa/preview"
+                width="100%"
+                height="240"
+                allow="autoplay"
+                borderRadius="lg"
+                mb={3}
+              />
+              <Text fontWeight="bold" fontSize="md" mb={1}>
+                AI-Powered State Scheme Navigator 
+              </Text>
+              <Text fontSize="sm" color="gray.400">
+                A Full-stack + LLM app that processes User Requirements with Contextual Chatbot and Outputs Real Government Schemes Scraped from Official Sources. 
+              </Text>
+            </Box>
+          </Section>
 
-                    <NextLink href={"https://data-visualisation-sobv.onrender.com"}>
-                    <Box pt={"5"} flexShrink={0} mt={{ base:4 , md: 0}} ml={{md:6}} align="left">
-                        <Image shadow='lg' borderColor="whiteAlpha.500" borderWidth={1} borderStyle="solid" maxWidth="250px" display="inline-block" borderRadius="none" src="/images/website2.png" alt="website1"/>
-                        <p>Data Visualisation from API</p>
-                    </Box>
-                    </NextLink>
-                </Section>
-            </SimpleGrid>
-        </Container>
-        </Layout>
-    )
-}
+          {/* ----------- Project 2 ----------- */}
+          <Section delay={0.2}>
+            <Box
+              pt={4}
+              flexShrink={0}
+              mt={{ base: 4, md: 0 }}
+              ml={{ md: 4 }}
+              align="left"
+              borderWidth={1}
+              borderColor="whiteAlpha.400"
+              borderRadius="lg"
+              overflow="hidden"
+              shadow="md"
+              p={2}
+            >
+              <Box
+                as="iframe"
+                src="https://drive.google.com/file/d/1vGULFOXDLbmx0LyOsYSTIN73zycteQnc/preview"
+                width="100%"
+                height="240"
+                allow="autoplay"
+                borderRadius="lg"
+                mb={3}
+              />
+              <Text fontWeight="bold" fontSize="md" mb={1}>
+                AI-Driven Travel & Social Discovery Platform
+              </Text>
+              <Text fontSize="sm" color="gray.400">
+                A Full-Stack social travel platform designed to connect like-minded travelers. It combines real-time trip planning with social networking features such as swipe-based matching, post sharing, and destination feeds. Built with the MERN stack, it integrates map-based discovery, user authentication, and smart recommendations to make exploring the world more social and personal.
+              </Text>
+            </Box>
+          </Section>
+        </SimpleGrid>
+      </Container>
+    </Layout>
+  );
+};
 
-export default Works
+export default Works;
