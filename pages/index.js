@@ -31,7 +31,7 @@ const Page=()=> {
             <Heading as="h2" variant="page-title">
                 Dev Bhanushali
             </Heading>
-            <p>Developer • AI/ML Engineer • LLM Integrator •  </p>
+            <p >Software Developer • System Design • Full Stack • AI • Web3  </p>
             </Box>
             <Box flexShrink={0} mt={{ base:4 , md: 0}} ml={{md:6}} align="center">
                 <Image shadow='lg' borderColor="blue.200" borderWidth={2} borderStyle="solid" maxWidth="100px" display="inline-block" borderRadius="full" src="/images/dev.jpg" alt="Profile"/>
@@ -66,23 +66,15 @@ const Page=()=> {
           <Heading paddingBottom="12px" as="h3" variant="section-title">
             Journey
           </Heading>
-          <BioSection>
-            <BioYear>2020</BioYear>
-            Completed Junior College.
-          </BioSection>
-          <BioSection>
-            <BioYear>2023</BioYear>
-            Began developing full-stack projects integrating AI/ML — from interactive web apps to
-            intelligent learning platforms.
-          </BioSection>
+          
+          
           <BioSection>
             <BioYear>2024</BioYear>
             Graduated in Computer Science, Mumbai University.
           </BioSection>
           <BioSection>
             <BioYear>2025</BioYear>
-            Working as a Full Stack & AI Developer — building end-to-end web systems, integrating
-            LLMs, automation, and scalable architectures.
+            As a Full Stack & AI Developer building end-to-end systems LLMs, automation, and scalable architectures.
           </BioSection>
         </Section>
             <Section delay={0.3}>
@@ -90,7 +82,7 @@ const Page=()=> {
             I ♥
           </Heading>
           <Paragraph>
-            AI Automation, Machine Learning, Full Stack Development, 3D Web Experiences, Game Design,
+            Automation, Machine Learning, Full Stack Development, 3D Web Experiences, Game Design,
             Generative Tools, and solving complex problems with creativity and code.
           </Paragraph>
         </Section>
@@ -122,7 +114,7 @@ const Page=()=> {
                     </ListItem>
                     
                     <ListItem>
-                        <Link href="" target="_blank">
+                        <Link href="https://github.com/dev-9820" target="_blank">
                             <Button variant="ghost" colorScheme="teal" leftIcon={<Icon as={IoLogoGithub}/>}>
                                 DevB
                             </Button>
