@@ -55,13 +55,7 @@ const ModelLap = () => {
             })
             renderer.setPixelRatio(window.devicePixelRatio)
             renderer.setSize(scW, scH)
-            // This works for both old and new versions of Three.js
-            renderer.outputColorSpace = THREE.SRGBColorSpace || 'srgb'; 
-
-            // Also, if you are on a very old version, you might need:
-            if (renderer.outputEncoding !== undefined) {
-                renderer.outputEncoding = THREE.sRGBEncoding || 3001; 
-            }
+            renderer.outputColorSpace = THREE.SRGBColorSpace
             renderer.shadowMap.enabled = true
             renderer.shadowMap.type = THREE.PCFSoftShadowMap
             
