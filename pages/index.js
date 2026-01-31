@@ -62,7 +62,7 @@ const Page = () => {
                 as="h2" 
                 variant="page-title" 
                 fontFamily="'Press Start 2P', cursive" // Optional: Need to import in fonts.js
-                fontSize={{ base: 'xl', md: '5xl' }}
+                fontSize={{ base: 'xl', md: '3xl' }}
                 letterSpacing="-1px"
             >
               Dev Bhanushali
