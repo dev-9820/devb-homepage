@@ -1,175 +1,299 @@
+import NextLink from 'next/link'
+import Image from 'next/image'
 import {
   Container,
   Heading,
   SimpleGrid,
   Box,
   Text,
-  Image,
   Link,
   HStack,
   VStack,
-  IconButton,
   useColorModeValue,
-  Badge
-} from "@chakra-ui/react";
-import { ExternalLinkIcon } from "@chakra-ui/icons";
-import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
-import Section from "../components/section";
-import Layout from "../components/layouts/article";
+  Badge,
+  Button
+} from '@chakra-ui/react'
+import { motion } from 'framer-motion'
+import { ChevronLeftIcon } from '@chakra-ui/icons'
+import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa'
+import Section from '../components/section'
+import Layout from '../components/layouts/article'
 
-const ProjectCard = ({ title, description, imageSrc, githubUrl, liveUrl, technologies, delay }) => {
-  const bgColor = useColorModeValue('whiteAlpha.50', 'whiteAlpha.50');
-  const borderColor = useColorModeValue('gray.200', 'whiteAlpha.300');
+const PixelBox = motion(Box)
+
+const ProjectCard = ({
+  title,
+  description,
+  imageSrc,
+  githubUrl,
+  liveUrl,
+  technologies,
+  delay
+}) => {
+  const shadowColor = useColorModeValue('rgba(0,0,0,0.2)', 'rgba(0,0,0,0.8)')
+  const pixelBg = useColorModeValue('white', 'gray.800')
+  const borderColor = useColorModeValue('black', 'whiteAlpha.800')
+  const accentColor = useColorModeValue('teal.500', '#67E8F9') // 'cyan.300' as hex code
 
   return (
     <Section delay={delay}>
-      <Box
-        bg={bgColor}
-        borderWidth={1}
+      <PixelBox
+        borderRadius="0px"
+        border="2px solid"
         borderColor={borderColor}
-        borderRadius="xl"
+        bg={pixelBg}
         overflow="hidden"
-        shadow="lg"
-        transition="all 0.3s"
-        _hover={{
-          transform: 'translateY(-5px)',
-          shadow: 'xl',
-          borderColor: 'blue.400'
+        boxShadow={`6px 6px 0px ${shadowColor}`}
+        transition={{ type: 'spring', stiffness: 300 }}
+        whileHover={{
+          scale: 1.02,
+          rotate: 1,
+          boxShadow: `10px 10px 0px ${shadowColor}`,
+          borderColor: accentColor
         }}
       >
-        <Box position="relative" overflow="hidden">
+        <Box
+          position="relative"
+          overflow="hidden"
+          borderBottom="2px solid"
+          borderColor={borderColor}
+          width="100%"
+          height={{ base: '220px', md: '260px' }}
+          bg={useColorModeValue('gray.100', 'gray.900')}
+        >
           <Image
             src={imageSrc}
             alt={title}
-            width="100%"
-            height="200px"
-            objectFit="cover"
-            borderRadius="lg"
-            mb={4}
+            layout="fill"
+            sizes="(max-width: 768px) 100vw, 50vw"
+            style={{ objectFit: 'contain' }}
+            quality={82}
+            loading="lazy"
           />
         </Box>
 
-        <VStack align="start" p={6} spacing={3}>
-          <Heading as="h3" fontSize="xl" fontWeight="bold">
+        <VStack align="start" p={5} spacing={3}>
+          <Heading
+            as="h3"
+            fontSize={{ base: 'md', md: 'lg' }}
+            fontWeight="bold"
+            fontFamily="'Press Start 2P', cursive"
+            lineHeight="tall"
+            color={accentColor}
+          >
             {title}
           </Heading>
 
-          <Text fontSize="sm" color="gray.500" lineHeight="tall">
+          <Text
+            fontSize="sm"
+            color={useColorModeValue('gray.600', 'gray.300')}
+            lineHeight="tall"
+            fontFamily="'JetBrains Mono', monospace"
+          >
             {description}
           </Text>
 
           {technologies && (
-            <HStack spacing={2} flexWrap="wrap">
+            <HStack spacing={2} flexWrap="wrap" gap={1}>
               {technologies.map((tech, index) => (
-                <Badge margin={2} key={index} colorScheme="blue" variant="subtle" fontSize="xs" padding={2} rounded="md" shadow="md">
+                <Badge
+                  key={index}
+                  colorScheme="teal"
+                  variant="outline"
+                  fontSize="xs"
+                  padding={2}
+                  borderRadius="0"
+                  fontFamily="'JetBrains Mono', monospace"
+                  borderWidth="1px"
+                  fontWeight="normal"
+                >
                   {tech}
                 </Badge>
               ))}
             </HStack>
           )}
 
-          <HStack>
-            <Link href={githubUrl} isExternal>
-              <IconButton
-                aria-label="GitHub"
-                icon={<FaGithub />}
-                size="lg"
-                variant="ghost"
-                colorScheme="gray"
-                _hover={{ color: 'blue.400' }}
-              />
+          <HStack spacing={2} pt={1}>
+            <Link href={githubUrl} isExternal _hover={{ textDecoration: 'none' }}>
+              <Button
+                size="sm"
+                leftIcon={<FaGithub />}
+                borderRadius="0"
+                borderWidth="2px"
+                borderColor={accentColor}
+                color={accentColor}
+                variant="outline"
+                fontFamily="'JetBrains Mono', monospace"
+                _hover={{
+                  bg: accentColor,
+                  color: useColorModeValue('white', 'black'),
+                  boxShadow: `4px 4px 0px ${shadowColor}`,
+                  transform: 'translate(-2px, -2px)'
+                }}
+                _active={{ transform: 'translate(0, 0)' }}
+                transition="all 0.1s"
+              >
+                Repo
+              </Button>
             </Link>
             {liveUrl && (
-              <Link href={liveUrl} isExternal>
-                <IconButton
-                  aria-label="Live Demo"
-                  icon={<FaExternalLinkAlt />}
+              <Link href={liveUrl} isExternal _hover={{ textDecoration: 'none' }}>
+                <Button
                   size="sm"
-                  variant="ghost"
-                  colorScheme="gray"
-                  _hover={{ color: 'green.400' }}
-                />
+                  leftIcon={<FaExternalLinkAlt />}
+                  borderRadius="0"
+                  borderWidth="2px"
+                  borderColor={accentColor}
+                  color={accentColor}
+                  variant="outline"
+                  fontFamily="'JetBrains Mono', monospace"
+                  _hover={{
+                    bg: accentColor,
+                    color: useColorModeValue('white', 'black'),
+                    boxShadow: `4px 4px 0px ${shadowColor}`,
+                    transform: 'translate(-2px, -2px)'
+                  }}
+                  _active={{ transform: 'translate(0, 0)' }}
+                  transition="all 0.1s"
+                >
+                  Live
+                </Button>
               </Link>
             )}
           </HStack>
         </VStack>
-      </Box>
+      </PixelBox>
     </Section>
-  );
-};
+  )
+}
 
 const Works = () => {
+  const shadowColor = useColorModeValue('rgba(0,0,0,0.2)', 'rgba(0,0,0,0.8)')
+  const pixelBg = useColorModeValue('white', 'gray.800')
+  const borderColor = useColorModeValue('black', 'whiteAlpha.800')
+  const accentColor = useColorModeValue('teal.500', 'cyan.300')
+
   return (
     <Layout>
-      <Container maxW="6xl">
-        <Heading as="h1" fontSize={{ base: 24, md: 28 }} mb={8} textAlign="center">
-          Projects & Work Samples
-        </Heading>
+      <Container maxW="container.lg">
+        <Section delay={0.05}>
+          <PixelBox
+            borderRadius="0px"
+            border="2px solid"
+            borderColor={borderColor}
+            bg={pixelBg}
+            p={3}
+            mb={6}
+            align="center"
+            boxShadow={`6px 6px 0px ${shadowColor}`}
+            fontFamily="'JetBrains Mono', monospace"
+            fontSize="sm"
+          >
+            [STATUS]: Projects & work samples.
+          </PixelBox>
+        </Section>
 
-        <SimpleGrid columns={{ base: 1, md: 2, lg: 2 }} gap={8}>
+        <Section delay={0.1}>
+          <Box display="flex" flexDir={{ base: 'column', md: 'row' }} alignItems="center" justifyContent="space-between" mb={8} gap={4}>
+            <Heading
+              as="h1"
+              fontFamily="'Press Start 2P', cursive"
+              fontSize={{ base: 'lg', md: 'xl' }}
+              letterSpacing="-1px"
+            >
+              _Projects_&_Work
+            </Heading>
+            <NextLink href="/" passHref>
+              <Button
+                leftIcon={<ChevronLeftIcon />}
+                variant="outline"
+                borderRadius="0px"
+                borderWidth="2px"
+                borderColor={accentColor}
+                color={accentColor}
+                fontFamily="'JetBrains Mono', monospace"
+                size="sm"
+                _hover={{
+                  bg: accentColor,
+                  color: useColorModeValue('white', 'black'),
+                  boxShadow: `4px 4px 0px ${shadowColor}`,
+                  transform: 'translate(-2px, -2px)'
+                }}
+                _active={{ transform: 'translate(0px, 0px)' }}
+                transition="all 0.1s"
+              >
+                Back
+              </Button>
+            </NextLink>
+          </Box>
+        </Section>
 
-        <ProjectCard
+        <SimpleGrid columns={{ base: 1, md: 2 }} gap={6}>
+          <ProjectCard
             title="AI - PDF Rule Checker"
-            description="A professional AI-powered tool that audits PDFs against custom rules and returns structured JSON results. Built with React, Node.js, and the Gemini API, it provides an interactive user interface with real-time results and handles multiple rules in a single upload."
+            description="AI-powered tool that audits PDFs against custom rules and returns structured JSON. React, Node.js, Gemini API — interactive UI with real-time results."
             imageSrc="/images/ai-pdf-screenshot.png"
             githubUrl="https://github.com/dev-9820/AI-PDF"
-            technologies={['React', 'Node.js', 'Gemini API', 'PDF Processing']}
-            delay={0.3}
-            
+            technologies={['React', 'Node.js', 'Gemini API', 'PDF']}
+            delay={0.15}
           />
 
           <ProjectCard
             title="ScrapeFlow AI"
-            description="An intelligent web scraping and data extraction platform powered by AI. Features automated data collection, intelligent parsing, and structured data export capabilities."
+            description="Intelligent web scraping and data extraction platform. Automated collection, parsing, and structured export."
             imageSrc="/images/scraper.png"
             githubUrl="https://github.com/dev-9820/ScrapeFlow-AI"
-            technologies={['AI', 'Web Scraping', 'Data Processing']}
-            delay={0.4}
+            technologies={['AI', 'Web Scraping', 'Data']}
+            delay={0.2}
           />
 
           <ProjectCard
             title="Secure Drive Frontend"
-            description="Frontend for the Secure File-Sharing application, built using React + Vite. Features include user login/signup with JWT auth, dashboard to view uploaded files, copyable shareable token links, file preview (metadata), and download files via access token."
+            description="React + Vite file-sharing frontend. JWT auth, dashboard, shareable links, file preview and download via access token."
             imageSrc="/images/file-ease-screenshot.png"
             githubUrl="https://github.com/dev-9820/file-ease-frontend"
             technologies={['React', 'Vite', 'JWT', 'File Sharing']}
-            delay={0.1}
+            delay={0.25}
             liveUrl="https://file-ease-frontend.vercel.app/"
           />
 
           <ProjectCard
             title="EventEase Frontend"
-            description="Modern Responsive UI for Event Booking Platform. A fully responsive, polished, production-ready frontend built using Vite + React.js, TailwindCSS, React Router, Context API (Auth + Toast + Events), and FullCalendar for bookings."
+            description="Responsive event booking UI. Vite + React, TailwindCSS, React Router, Context API, FullCalendar for bookings."
             imageSrc="/images/event.png"
             githubUrl="https://github.com/dev-9820/eventease-frontend"
             technologies={['React', 'Vite', 'TailwindCSS', 'FullCalendar']}
-            delay={0.2}
+            delay={0.3}
             liveUrl="https://eventease-frontend-phi.vercel.app/"
           />
 
           <ProjectCard
-            title="Fleet Management Landing Page"
-            description="A professional landing page for fleet management services. Features modern design, responsive layout, and comprehensive service information."
+            title="Fleet Management Landing"
+            description="Landing page for fleet management services. Modern layout and service information."
             imageSrc="/images/fleet.png"
             githubUrl="https://github.com/dev-9820/Fleet-Management-Page"
             liveUrl="https://fleet-management-page.vercel.app/"
-            technologies={['React', 'Landing Page', 'Fleet Management']}
-            delay={0.5}
+            technologies={['React', 'Landing Page', 'Fleet']}
+            delay={0.35}
           />
+
           <ProjectCard
-            title="Dental Clinic Landing Page"
-            description="A professional landing page for Dental Clinic services. Features modern design, responsive layout, and comprehensive service information."
+            title="Dental Clinic Landing"
+            description="Landing page for dental clinic services. Responsive layout and service information."
             imageSrc="/images/dental.png"
             githubUrl="https://github.com/dev-9820/DentalcCinic"
             liveUrl="https://dentalc-cinic.vercel.app/"
-            technologies={['React', 'Landing Page', 'Dental Clinic']}
-            delay={0.5}
+            technologies={['React', 'Landing Page', 'Dental']}
+            delay={0.4}
           />
-
         </SimpleGrid>
+
+        <Box opacity={0.4} fontSize="xs" align="center" my={10} fontFamily="'JetBrains Mono', monospace">
+          © {new Date().getFullYear()} Dev Bhanushali // WORKS_PAGE
+        </Box>
       </Container>
     </Layout>
-  );
-};
+  )
+}
 
-export default Works;
+export default Works

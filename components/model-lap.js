@@ -55,7 +55,7 @@ const ModelLap = () => {
             })
             renderer.setPixelRatio(window.devicePixelRatio)
             renderer.setSize(scW, scH)
-            renderer.outputColorSpace = THREE.SRGBColorSpace
+            renderer.outputColorSpace = THREE.SRGBColorSpace || 'srgb'
             renderer.shadowMap.enabled = true
             renderer.shadowMap.type = THREE.PCFSoftShadowMap
             
